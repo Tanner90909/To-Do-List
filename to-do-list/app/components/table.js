@@ -1,7 +1,6 @@
-
-
-export default function Table(){
-
+import React from "react"
+import { useState, useEffect } from "react"
+export default function Table(todo){
 
     return(
     <>
@@ -12,11 +11,14 @@ export default function Table(){
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>
-                    hello
-                </td>
-            </tr>
+            {/* {todoData.map((item) => (
+                <tr>
+                    <td>
+                        {item}
+                    </td>
+                </tr>
+            )
+            )} */}
         </tbody>
     </table>
     </>

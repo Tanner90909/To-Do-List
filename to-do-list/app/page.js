@@ -8,11 +8,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 export default function Home() {
 
-const [todo, setTodo] = useState("");
+const [todo, setTodo] = useState([]);
 
 useEffect(() => {
-localStorage.setItem("todo", JSON.stringify(todo))
-console.log(todo)
+localStorage.setItem("text", JSON.stringify(todo))
 },
 [todo]);
 

@@ -6,11 +6,9 @@ export default function Input(props){
     let enterKey = (e) => {
     if (e.key === "Enter") {
         let inputText = e.target.value;
-        props.setTodo(
-            inputText
-            )
-        
+        props.setTodo(todo => [...todo, inputText])
         e.target.value = "";
+        console.log(todo)
     }
 }
     return(
