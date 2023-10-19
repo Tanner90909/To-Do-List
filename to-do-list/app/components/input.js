@@ -8,7 +8,6 @@ export default function Input(props){
         let inputText = e.target.value;
         props.setTodo(todo => [...todo, inputText])
         e.target.value = "";
-        console.log(todo)
     }
 }
     return(

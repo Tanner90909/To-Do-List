@@ -27,7 +27,10 @@ localStorage.setItem("text", JSON.stringify(todo))
             setTodo = {setTodo}
             />
             {/* table */}
-            <Table />
+            <Table
+            todo = {todo}
+            setTodo = {setTodo}
+             />
           </div>
         </div>
       </div>
