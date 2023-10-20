@@ -12,6 +12,7 @@ export default function Table({ todos, removeTodo, complete }) {
           </tr>
         </thead>
         <tbody>
+{/* conditional rendering */}
           {!completedView
             ? todos.map((todo, i) => (
                 <tr key={Date.now() + i}>
