@@ -1,18 +1,18 @@
 import React from "react"
-import { useState, useEffect } from "react"
 
 export default function Table(props){
     
     let todoData = [...props.todo];
+    let completeData = [];
 
     function removeTodo (item, setTodo){
-        // console.log("Im working")
         for (let i = 0; i < todoData.length; i++){
             if (item === todoData[i]){
-                console.log(todoData)
-                todoData.splice(i, 1); 
-                console.log(todoData)
+                completeData.push(todoData[i])
+                todoData.splice(i, 1);
                 props.setTodo(todoData); 
+                console.log(todoData)
+                console.log(completeData)
             }
             }
         }
@@ -29,8 +29,15 @@ export default function Table(props){
         <tbody>
             {todoData.map((item, i) => (
                 <tr key={Date.now() + i}>
-                    <td onClick={() => removeTodo(item)}>
-                        {item}
+                    <td>
+                        <div className="row">
+                            <div className="col-6">
+                                {item}
+                            </div>
+                            <div className="col-6">
+                                <button className="rounded-pill, btn btn-info btn-sm" onClick={() => removeTodo(item)}>Complete</button>
+                            </div>
+                        </div>
                     </td>
                 </tr>
             )

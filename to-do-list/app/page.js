@@ -11,7 +11,7 @@ export default function Home() {
 const [todo, setTodo] = useState([]);
 
 useEffect(() => {
-localStorage.setItem("text", JSON.stringify(todo))
+localStorage.setItem("text", JSON.stringify(todo));
 },
 [todo]);
 
